@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Shooter</title>
+  </head>
+  <style>
+    body {
+      width: 100%;
+      overflow: hidden;
+      background: url("space.jpg");
+      background-size: cover;
+    }
+    #board {
+      position: relative;
+      height: 70vh;
+
+      /*height: 500px;*/
+      aspect-ratio: 1/1;
+      margin: 40px auto;
+      border: 2px solid white;
+      background-color: black;
+      overflow: hidden;
+    }
+
+    #jet {
+      position: absolute;
+      width: 8vh;
+      height: 8vh;
+      /*height: 40px;*/
+      /*margin-left: auto;*/
+      left: 50%;
+      background: url("rocket.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      /*display: flex;*/
+      /*justify-content: center;*/
+      bottom: 0px;
+    }
+
+    .bullets {
+      position: absolute;
+      bottom: 8vh;
+      left: 51%;
+      width: 20px;
+      height: 20px;
+      background: url("bullet.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .rocks {
+      position: absolute;
+      top: 0px;
+      width: 9vh;
+      height: 9vh;
+      background: url("alien.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    #points {
+      position: absolute;
+      top: 0px;
+      /*margin: 5px;*/
+      right: 5px;
+      opacity: 0.7;
+      font-size: 300%;
+      color: white;
+    }
+  </style>
+  <script src="app.js" defer></script>
+  <body>
+  <div class="container">
+
+    <div class="row">
+<!--      <div id="points" class="col"> 0</div>-->
+      <div id="board" class="col-10">
+        <div id="points"> 0</div>
+        <div class="rocks"></div>
+        <div id="jet"></div>
+      </div>
+
+    </div>
+
+  </div>
+  </body>
+</html>
